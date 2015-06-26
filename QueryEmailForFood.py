@@ -46,6 +46,7 @@ for i in ids:
 	email_senders.append(email_message['From'])
 	text = "SUBJECT: " + email_message['subject'] + "\n";
 	text = text + "BODY TEXT: "
+        # The following snippet is from http://stackoverflow.com/a/1463144
 	for part in email_message.walk():
 		# each part is a either non-multipart, or another multipart message
 		# that contains further parts... Message is organized like a tree
